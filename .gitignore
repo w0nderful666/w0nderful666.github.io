@@ -1,0 +1,14 @@
+node_modules/
+dist/
+build/
+.env
+.env.*
+*.log
+.venv/
+.tools/
+.cache/
+preview/
+# 大文件统一放在该目录，不纳入版本管理。
+large-files/
+
+_site/
