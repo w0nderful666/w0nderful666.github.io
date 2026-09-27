@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark light">
+<meta name="description" content="w0nderful666 — Android audio experiments and local-first tools. Explore AeMusic, WF-1000XM5 spatial audio, and FxxKPDF.">
+<title>w0nderful666 — projects & experiments</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23101412'/%3E%3Ctext x='8' y='44' fill='%2399e6ad' font-family='monospace' font-size='36'%3E%3E_%3C/text%3E%3C/svg%3E">
+<style>
+:root{color-scheme:dark;--bg:#101412;--ink:#d9e1da;--muted:#929f96;--line:#2b352e;--accent:#9adeaa;--hover:#18211b} :root[data-theme=light]{color-scheme:light;--bg:#f5f6f2;--ink:#222c25;--muted:#5e6d63;--line:#d5ddd5;--accent:#286c3d;--hover:#e9eee6}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:32px}body{margin:0;background:var(--bg);color:var(--ink);font:13px/1.85 ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace}a{color:inherit;text-decoration:none}a:hover{color:var(--accent)}button{font:inherit;color:inherit;cursor:pointer}a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:5px}::selection{background:var(--accent);color:var(--bg)}.shell{max-width:860px;padding:0 40px;margin:auto}header{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:30px 0;border-bottom:1px solid var(--line)}.path{color:var(--muted);font-size:12px}.path b{color:var(--accent);font-weight:400}.controls{display:flex;gap:8px;align-items:center}.control{background:none;border:1px solid var(--line);padding:5px 10px;border-radius:3px;min-height:36px;font-size:11px}.control:hover{background:var(--hover);border-color:var(--muted)}[hidden]{display:none!important}.skip{position:absolute;top:-90px;background:var(--bg);padding:12px}.skip:focus{top:0}main{padding-top:65px}.command{color:var(--muted);font-size:12px;margin:0 0 18px}.prompt{color:var(--accent);margin-right:10px;user-select:none}h1{font-size:clamp(28px,5vw,44px);line-height:1.2;font-weight:500;letter-spacing:-2px;margin:0 0 24px;overflow-wrap:anywhere}.cursor{color:var(--accent)}.intro{max-width:650px;margin:0;color:var(--muted);font-size:14px;line-height:1.9}.quick-links{display:flex;gap:26px;margin:23px 0 0;font-size:12px}.quick-links a{min-height:44px;display:inline-flex;align-items:center}.external{color:var(--muted);margin-left:8px}.section{margin-top:47px}.section-heading{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:5px}h2{font-size:12px;font-weight:400;color:var(--muted);margin:0}.count{font-size:11px;color:var(--muted)}.project{display:grid;grid-template-columns:30px 1fr;gap:14px;padding:26px 0;border-bottom:1px solid var(--line)}.index{color:var(--muted);font-size:11px;padding-top:4px}.project-top{display:flex;align-items:baseline;justify-content:space-between;gap:15px}.project h3{margin:0;font-size:16px;line-height:1.6;font-weight:500;overflow-wrap:anywhere}.status{font-size:10px;color:var(--accent);white-space:nowrap}.description{font-size:12px;color:var(--muted);margin:9px 0 13px;max-width:640px}.project-meta{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px 20px;font-size:10px;color:var(--muted)}.project-links{display:flex;gap:18px}.project-links a{display:inline-flex;align-items:center;min-height:30px;color:var(--ink);font-size:11px}.project-links a:hover{color:var(--accent)}.stack{display:flex;gap:12px 25px;flex-wrap:wrap;margin:19px 0 0;font-size:12px;color:var(--ink)}.stack span:before{content:"·";color:var(--accent);margin-right:8px}.end{display:flex;gap:12px;align-items:baseline;border-top:1px solid var(--line);margin-top:38px;padding-top:22px;color:var(--muted);font-size:12px}.end a{color:var(--accent);overflow-wrap:anywhere}footer{display:flex;justify-content:space-between;gap:20px;margin-top:55px;padding:20px 0 30px;color:var(--muted);font-size:10px;border-top:1px solid var(--line)}.footer-message{display:flex;align-items:center;gap:7px}.dot{width:5px;height:5px;background:var(--accent);display:inline-block;border-radius:50%}@media(max-width:550px){.shell{padding:0 22px}header{padding:20px 0;gap:10px}.path{font-size:10px}.controls{gap:6px}.control{padding:4px 8px;min-height:44px}main{padding-top:45px}h1{font-size:34px;letter-spacing:-1.6px}.intro{font-size:13px}.project{grid-template-columns:20px 1fr;gap:9px;padding:23px 0}.project-top{flex-wrap:wrap;gap:3px}.project h3{font-size:14px}.status{font-size:10px}.section{margin-top:35px}.project-links a{min-height:44px}.end{flex-wrap:wrap;gap:4px 12px}footer{margin-top:38px;flex-wrap:wrap}.quick-links{gap:20px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="shell">
+<a class="skip" href="#main" data-i18n="skip">Skip to content</a>
+<header>
+<a class="path" href="#" aria-label="Home"><b>~/</b>w0nderful666</a>
+<div class="controls">
+<button id="language" class="control" type="button" aria-label="Switch to Chinese" hidden>中文</button>
+<button id="theme" class="control" type="button" aria-label="Switch to light theme" hidden>light</button>
+</div>
+</header>
+<main id="main">
+<section aria-labelledby="name">
+<p class="command"><span class="prompt" aria-hidden="true">$</span>whoami</p>
+<h1 id="name">w0nderful666<span class="cursor" aria-hidden="true">_</span></h1>
+<p class="intro" data-i18n="intro">Android audio experiments & local-first tools.<br>A small collection of things I build and open-source.</p>
+<div class="quick-links"><a href="https://github.com/w0nderful666" target="_blank" rel="noopener noreferrer">GitHub <span class="external" aria-hidden="true">↗</span></a><a href="#projects"><span data-i18n="explore">Explore projects</span> <span class="external" aria-hidden="true">↓</span></a></div>
+</section>
+<section class="section" id="projects" aria-labelledby="projects-title">
+<div class="section-heading"><h2 id="projects-title"><span class="prompt" aria-hidden="true">$</span>ls ./projects</h2><span class="count" data-i18n="count">03 public repositories</span></div>
+<article class="project">
+<span class="index" aria-hidden="true">01</span><div>
+<div class="project-top"><h3><a href="https://github.com/w0nderful666/AeMusic" target="_blank" rel="noopener noreferrer">AeMusic</a></h3><span class="status" data-i18n="preview">[ public preview ]</span></div>
+<p class="description" data-i18n="music">An Android music player built with Jetpack Compose and Media3. Local playback, synced lyrics, self-hosted libraries, and experimental Liquid Glass visuals.</p>
+<div class="project-meta"><span>Kotlin / Jetpack Compose / Media3</span><div class="project-links"><a href="https://github.com/w0nderful666/AeMusic" target="_blank" rel="noopener noreferrer"><span data-i18n="source">source</span><span class="external" aria-hidden="true">↗</span></a></div></div>
+</div></article>
+<article class="project">
+<span class="index" aria-hidden="true">02</span><div>
+<div class="project-top"><h3><a href="https://github.com/w0nderful666/wf1000xm5-spatial-audio-android" target="_blank" rel="noopener noreferrer">WF-1000XM5 / Spatial Audio</a></h3><span class="status" data-i18n="experimental">[ experimental ]</span></div>
+<p class="description" data-i18n="spatial">Head-tracked audio on Android using the earbuds’ real IMU, a native HID bridge, and a Media3 rendering pipeline. An experiment, currently requiring root.</p>
+<div class="project-meta"><span>Kotlin / Android / DSP</span><div class="project-links"><a href="https://github.com/w0nderful666/wf1000xm5-spatial-audio-android" target="_blank" rel="noopener noreferrer"><span data-i18n="source">source</span><span class="external" aria-hidden="true">↗</span></a></div></div>
+</div></article>
+<article class="project">
+<span class="index" aria-hidden="true">03</span><div>
+<div class="project-top"><h3><a href="https://github.com/w0nderful666/FxxKPDF" target="_blank" rel="noopener noreferrer">FxxKPDF</a></h3><span class="status" data-i18n="browser">[ browser tool ]</span></div>
+<p class="description" data-i18n="pdf">A local-first PDF toolkit. Merge, split, annotate, sign, and more — processing stays in your browser, without file uploads.</p>
+<div class="project-meta"><span>JavaScript / WebAssembly / PDF</span><div class="project-links"><a href="https://github.com/w0nderful666/FxxKPDF" target="_blank" rel="noopener noreferrer"><span data-i18n="source">source</span><span class="external" aria-hidden="true">↗</span></a><a href="https://w0nderful666.github.io/FxxKPDF/" target="_blank" rel="noopener noreferrer"><span data-i18n="demo">live demo</span><span class="external" aria-hidden="true">↗</span></a></div></div>
+</div></article>
+</section>
+<section class="section" aria-labelledby="stack-title">
+<h2 id="stack-title"><span class="prompt" aria-hidden="true">$</span>cat ./stack</h2>
+<div class="stack"><span>Kotlin</span><span>Jetpack Compose</span><span>Media3</span><span>JavaScript</span><span>WebAssembly</span></div>
+</section>
+<div class="end"><span class="prompt" aria-hidden="true">$</span><span data-i18n="more">More code, context, and conversations on</span><a href="https://github.com/w0nderful666" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div>
+</main>
+<footer><span>© <span id="year">2026</span> w0nderful666</span><span class="footer-message"><span class="dot" aria-hidden="true"></span><span data-i18n="footer">Small tools. Open source.</span></span></footer>
+</div>
+<script>
+(() => {
+  const translations = {
+    en: {
+      skip:'Skip to content', intro:'Android audio experiments & local-first tools.\nA small collection of things I build and open-source.', explore:'Explore projects',count:'03 public repositories',preview:'[ public preview ]',experimental:'[ experimental ]',browser:'[ browser tool ]',
+      music:'An Android music player built with Jetpack Compose and Media3. Local playback, synced lyrics, self-hosted libraries, and experimental Liquid Glass visuals.',
+      spatial:'Head-tracked audio on Android using the earbuds’ real IMU, a native HID bridge, and a Media3 rendering pipeline. An experiment, currently requiring root.',
+      pdf:'A local-first PDF toolkit. Merge, split, annotate, sign, and more — processing stays in your browser, without file uploads.',
+      source:'source',demo:'live demo',more:'More code, context, and conversations on',footer:'Small tools. Open source.',title:'w0nderful666 — projects & experiments',themeLight:'Switch to light theme',themeDark:'Switch to dark theme',light:'light',dark:'dark',home:'Home',meta:'w0nderful666 — Android audio experiments and local-first tools. Explore AeMusic, WF-1000XM5 spatial audio, and FxxKPDF.'
+    },
+    zh: {
+      skip:'跳到正文',intro:'Android 音频实验与本地优先的工具。\n这里收集我构建和开源的一些东西。',explore:'查看项目',count:'03 个公开仓库',preview:'[ 公开预览 ]',experimental:'[ 实验项目 ]',browser:'[ 浏览器工具 ]',
+      music:'使用 Jetpack Compose 和 Media3 构建的 Android 音乐播放器。支持本地播放、同步歌词、自托管音乐库，以及实验性的 Liquid Glass 视觉效果。',
+      spatial:'使用耳机真实 IMU、原生 HID 桥接和 Media3 渲染管线，在 Android 上实验头部追踪音频。目前需要 root 权限。',
+      pdf:'本地优先的 PDF 工具箱。合并、拆分、批注、签名等操作均在浏览器内处理，无需上传文件。',
+      source:'源码',demo:'在线体验',more:'更多代码、项目说明与交流，尽在',footer:'小工具，开源分享。',title:'w0nderful666 — 项目与实验',themeLight:'切换到浅色主题',themeDark:'切换到深色主题',light:'浅色',dark:'深色',home:'首页',meta:'w0nderful666 的 Android 音频实验与本地优先工具：AeMusic、WF-1000XM5 空间音频和 FxxKPDF。'
+    }
+  };
+  const root=document.documentElement, languageButton=document.getElementById('language'), themeButton=document.getElementById('theme');
+  let language='en', theme='dark';
+  try { const saved=localStorage.getItem('homepage-language'); if(saved==='zh')language='zh'; if(localStorage.getItem('homepage-theme')==='light')theme='light'; } catch {}
+  const updateTheme=()=>{
+    root.dataset.theme=theme;
+    themeButton.textContent=translations[language][theme==='dark'?'light':'dark'];
+    themeButton.setAttribute('aria-label',translations[language][theme==='dark'?'themeLight':'themeDark']);
+  };
+  const updateLanguage=()=>{
+    root.lang=language==='zh'?'zh-CN':'en';
+    document.querySelectorAll('[data-i18n]').forEach(element=>{element.textContent=translations[language][element.dataset.i18n];});
+    document.querySelector('.intro').style.whiteSpace='pre-line';
+    document.title=translations[language].title;
+    document.querySelector('meta[name="description"]').content=translations[language].meta;
+    document.querySelector('.path').setAttribute('aria-label',translations[language].home);
+    languageButton.textContent=language==='en'?'中文':'EN';
+    languageButton.setAttribute('aria-label',language==='en'?'Switch to Chinese':'切换到英文');
+    updateTheme();
+  };
+  languageButton.addEventListener('click',()=>{language=language==='en'?'zh':'en';updateLanguage();try{localStorage.setItem('homepage-language',language);}catch{}});
+  themeButton.addEventListener('click',()=>{theme=theme==='dark'?'light':'dark';updateTheme();try{localStorage.setItem('homepage-theme',theme);}catch{}});
+  updateLanguage();languageButton.hidden=false;themeButton.hidden=false;
+  document.getElementById('year').textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
