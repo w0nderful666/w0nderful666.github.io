@@ -1,23 +1,29 @@
-# w0nderful666 个人主页
+# w0nderful666.github.io
 
-极简终端风静态个人主页：默认英文和深色，支持中英文与深浅主题切换。无构建依赖，不调用外部 API，不加载外部字体。
+Minimal terminal-style personal homepage for **w0nderful666**. English by default, dark by default, with EN/ZH and light/dark toggles that remember your choice. No build step, no external APIs, no external fonts — one `index.html` holds everything.
 
-## 内容
+## Content
 
-项目介绍根据 2026-09-27 的公开仓库 README 整理：
+Three hand-picked projects, summarized from their public READMEs (snapshot 2026-09-27):
 
-- [AeMusic](https://github.com/w0nderful666/AeMusic)
-- [WF-1000XM5 Spatial Audio](https://github.com/w0nderful666/wf1000xm5-spatial-audio-android)
-- [FxxKPDF](https://github.com/w0nderful666/FxxKPDF)
+- [AeMusic](https://github.com/w0nderful666/AeMusic) — Android music player (Jetpack Compose / Media3)
+- [WF-1000XM5 Spatial Audio](https://github.com/w0nderful666/wf1000xm5-spatial-audio-android) — head-tracked audio experiment on Android
+- [FxxKPDF](https://github.com/w0nderful666/FxxKPDF) — local-first PDF toolkit in the browser ([live demo](https://w0nderful666.github.io/FxxKPDF/))
 
-项目为手动精选，不自动同步 GitHub。技术栈依据项目整理，不代表职业履历。
+Projects are curated manually — nothing auto-syncs from GitHub.
 
-## 预览
+## Preview
 
-直接用浏览器打开 `index.html`，或执行 `python3 preview_server.py` 后访问 `http://localhost:8080/`。服务监听所有 IPv4 网卡，仅提供首页，不提供目录列表。
+Open `index.html` directly in a browser, or run the local preview server:
 
-## 发布与维护
+```bash
+python3 preview_server.py
+```
 
-阅读 [DEPLOYMENT.md](DEPLOYMENT.md)。仓库包含 GitHub Pages Actions 配置，推送至 main 可触发部署；须先在仓库设置启用 GitHub Actions 作为 Pages 来源。只有 `index.html` 被发布，说明文档和预览服务不进入站点产物。
+Serves `/` and `/index.html` on port 8080. The preview server is a local tool only; it is not part of the deployed site.
 
-新项目需修改页面和双语字典；自动部署不等于自动添加项目。
+## Deploy
+
+Published with GitHub Pages via the `Deploy personal homepage` Actions workflow. Pushing to `main` triggers a deploy automatically; only `index.html` is packaged into the site artifact.
+
+To add a project later, edit the `#projects` section in `index.html` (copy an `<article class="project">` block, add `data-i18n` keys plus both `en`/`zh` translations), then push.
