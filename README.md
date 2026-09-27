@@ -1,6 +1,6 @@
 # w0nderful666.github.io
 
-Minimal terminal-style personal homepage for **w0nderful666**. English by default, dark by default, with EN/ZH and light/dark toggles that remember your choice. No build step, no external APIs, no external fonts — one `index.html` holds everything.
+Minimal terminal-style personal homepage for **w0nderful666**. English, dark by default, with a light/dark toggle that remembers your choice. No build step, no external APIs, no external fonts — one `index.html` holds everything.
 
 ## Content
 
@@ -26,4 +26,4 @@ Serves `/` and `/index.html` on port 8080. The preview server is a local tool on
 
 Published with GitHub Pages via the `Deploy personal homepage` Actions workflow. Pushing to `main` triggers a deploy automatically; only `index.html` is packaged into the site artifact.
 
-To add a project later, edit the `#projects` section in `index.html` (copy an `<article class="project">` block, add `data-i18n` keys plus both `en`/`zh` translations), then push.
+To add a project later, edit the `#projects` section in `index.html` (copy an `<article class="project">` block), then push.
